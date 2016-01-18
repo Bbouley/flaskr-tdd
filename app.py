@@ -13,7 +13,7 @@ app.config.from_object(__name__)
 
 def connect_db():
   """Connects to the database."""
-  rv = sqllite3.connect(app.config['DATABASE'])
+  rv = sqlite3.connect(app.config['DATABASE'])
   rv.row_factory = sqlite3.Row
   return rv
 
